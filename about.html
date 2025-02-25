@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* general reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+        /* about me section */
+        .about-me{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* top half with gradient animation */
+        .top-half{
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, rgb(112,184,213),#9fa7ad,#b0eaea,#9db2b2);
+            background-size: 400% 400%;
+            animation: colorShift 6s infinite ease-in-out;
+            color: black;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.4);
+        }
+        /*animaton for gradient transition */
+        @keyframes colorshift{
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;     
+            }
+            100%{
+               background-position: 0% 50%;
+            }
+        }
+        /*bottom half with image */
+        .bottom-half{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            background: #1c1c1c;
+            padding: 20px;
+        }
+            /*left section with image*/
+           .left-section{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+           } 
+        .left-section img{
+                max-width: 80%;
+                max-height: 250%;
+        }
+        /* right section with text*/
+        .right-section{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content:center ;
+            padding: 20px;
+            color: #ffffff;
+        }
+        .right-section h1{
+            font-size: 50px;
+            color: rgb(112, 184, 213);
+            margin-bottom: 10px;
+        }
+        .right-section p{
+            font-size: 40px;
+            color:#d3d3d3;
+            line-height: 1.6;
+
+        }
+        /*add bright hover effect for links (if any)*/
+        .right-section a{
+            color: #4682b4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .right-section a:hover {
+            color: rgb(112, 184, 213);
+            text-shadow: 0px 0px 5px rgb(112, 184, 213);
+        }
+    </style>
+</head>
+<body>
+    <section class="about-me">
+         <!--top half with animation-->
+         <div>
+            <h1>About Me</h1>
+         </div>
+         <!--bottom half with content-->
+         <div class="bottom-half">
+            <div class="left-section">
+             <img src="mansi.jpg" alt="My image">
+            </div>
+            <div class="right-section">
+             <h1>Hello, I Am Mansi</h1>
+             <p>I am Passionate web developer in building responsive and dynamic web application. I love working with modern technology.</p>
+            </div>
+         </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        body{
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: rgb(112, 184, 213);
+            background-size: cover;
+        }
+        header{
+            background-color: #140d12;
+            color: rgb(39, 74, 88);
+            padding: 8px;
+            text-align: center;
+        }
+        h1{
+            font-size: 50px;
+        }
+        main{
+            padding: 5%;
+            font-size: 20px;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        form{
+            margin: 10px 0 5px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            margin: 10px 0 5px;
+            color: #140d12;
+        }
+        input{
+            padding: 60px;
+        }
+        input,textarea{
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 15px solid #ccc;
+            border-radius: 6px;
+            font-size: 50px;
+        }
+        button{
+            padding: 25px;
+            background: #140d12;
+            color: aliceblue;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            font-size: 40px;
+        }
+        button:hover{
+            background: #140d12;
+        }
+        footer{
+            text-align: center;
+            margin-top: 0%;
+            color: #fff;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <main>
+            <section>
+                <form method="post">
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" name="name" placeholder="Mansi" required>
+
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" placeholder="mansiabc0@gmail.com" required>
+
+                   <label for="name">Message:</label>
+                   <input type="message" id="message" name="message" required>
+
+                   <button type="submit" onclick="printvalue()">Send Message </button>
+                </form>
+                <script language="javascript" type="text/javascript">
+                   function printvalue(){
+                    alert("message was sent");
+                   }
+                </script>
+            </section>
+        </main>
+    </header>
+</body>
+</html>
